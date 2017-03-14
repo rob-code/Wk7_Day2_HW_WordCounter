@@ -31,10 +31,14 @@ public class WordCounterTest {
         occurrences = wordCounter.getOccurrences();
         int value = occurrences.get("was");
         assertEquals(6, value);
-            System.out.println(occurrences);
+        //System.out.println(occurrences);
     }
 
-
+    @Test
+    public void canSortOccurrencesByValue(){
+        occurrences = wordCounter.getOccurrences();
+        wordCounter.sortOccurrences(occurrences);
+    }
 
 
 

@@ -7,17 +7,19 @@ public class WordCounter {
 
     String phrase;
     HashMap<String,Integer> occurrences;
+    TreeMap<String, Integer> occTree;
+
 
 
     public WordCounter(String phrase){
         this.phrase = phrase;
         occurrences = new HashMap<String, Integer>();
+        occTree = new TreeMap<String, Integer>();
     }
 
     public String getWordCount(){
 
-        //If you are new to regular expression in Java,
-        // the \s is a character class to detect space including tabs,
+        // Regex: the \s is a character class to detect space including tabs,
         // since \ needs to be escaped in Java, it becomes \\s and because
         // there could be multiple spaces between words we made
         // this regular expression greedy by adding +,
@@ -54,8 +56,6 @@ public class WordCounter {
 
         for (int i = 0; i < words.length; i++) {
 
-            System.out.println(words[i]);
-
             if (occurrences.containsKey(words[i])) {
                 occurrences.put(words[i], occurrences.get(words[i]) + 1);
             }
@@ -68,6 +68,14 @@ public class WordCounter {
         return occurrences;
 
     }
+
+    public void sortOccurrences(HashMap<String, Integer> word_occurrences){
+
+        System.out.println(word_occurrences);
+
+    }
+
+
 
 
 }
