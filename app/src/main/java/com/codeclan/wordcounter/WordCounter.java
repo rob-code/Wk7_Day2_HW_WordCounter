@@ -1,14 +1,17 @@
 package com.codeclan.wordcounter;
 
+import java.sql.Array;
 import java.util.*;
 
 public class WordCounter {
 
-    String string;
+    String phrase;
+    HashMap<String,Integer> occurrences;
 
 
-    public WordCounter(String string){
-        this.string = string;
+    public WordCounter(String phrase){
+        this.phrase = phrase;
+        occurrences = new HashMap<String, Integer>();
     }
 
     public String getWordCount(){
@@ -22,14 +25,27 @@ public class WordCounter {
         // accordingly. This is the simplest way to count the number
         // of words in a given sentence.
 
-        if (this.string == null || this.string.isEmpty()) {
+        if (this.phrase == null || this.phrase.isEmpty()) {
             return "no words found, please try again";
         }
-
-        String[] words = string.split("\\s+");
+        String[] words = getArrayOfWords();
         return Integer.toString(words.length);
     }
 
+     public String[] getArrayOfWords(){
+
+         String[] array = phrase.split("\\s+");
+         return array;
+     }
+
+
+    public void getOccurrences(){
+
+        String[] words = getArrayOfWords();
+        Integer n = words.length;
+
+
+    }
 
 
 }
