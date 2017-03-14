@@ -11,7 +11,7 @@ public class WordCounter {
         this.string = string;
     }
 
-    public int getWordCount(){
+    public String getWordCount(){
 
         //If you are new to regular expression in Java,
         // the \s is a character class to detect space including tabs,
@@ -23,11 +23,11 @@ public class WordCounter {
         // of words in a given sentence.
 
         if (this.string == null || this.string.isEmpty()) {
-            return 0;
+            return "no words found, please try again";
         }
 
         String[] words = string.split("\\s+");
-        return words.length;
+        return Integer.toString(words.length);
     }
 
 
