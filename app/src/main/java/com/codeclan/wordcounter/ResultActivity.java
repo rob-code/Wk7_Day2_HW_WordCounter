@@ -25,6 +25,6 @@ public class ResultActivity extends AppCompatActivity {
 
         wordCounter = new WordCounter(text);
         wordCount = (TextView)findViewById(R.id.count);
-        wordCount.setText(wordCounter.getWordCount());
+        wordCount.setText("Your text contains " + wordCounter.getWordCount() + " words!");
     }
 }
