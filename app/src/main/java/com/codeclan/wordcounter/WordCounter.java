@@ -34,16 +34,38 @@ public class WordCounter {
 
      public String[] getArrayOfWords(){
 
+         phrase = phrase.toLowerCase();
+
+         if(phrase.contains(",")){
+             phrase = phrase.replace(",", " ");
+         }
+         if(phrase.contains(".")) {
+             phrase = phrase.replace(".", " ");
+         }
+
          String[] array = phrase.split("\\s+");
          return array;
      }
 
 
-    public void getOccurrences(){
+    public HashMap<String, Integer> getOccurrences(){
 
         String[] words = getArrayOfWords();
-        Integer n = words.length;
 
+        for (int i = 0; i < words.length; i++) {
+
+            System.out.println(words[i]);
+
+            if (occurrences.containsKey(words[i])) {
+                occurrences.put(words[i], occurrences.get(words[i]) + 1);
+            }
+            else
+            {
+                occurrences.put(words[i],1);
+            }
+        }
+
+        return occurrences;
 
     }
 

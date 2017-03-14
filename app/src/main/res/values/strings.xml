@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">WordCounter</string>
-    <string name="question">Please enter your sentence</string>
-    <string name="count">Count Words!</string>
+    <string name="question">Enter your phrase</string>
+    <string name="count">Count Words</string>
     <string name="result_label">WordCounter - Results</string>
 </resources>

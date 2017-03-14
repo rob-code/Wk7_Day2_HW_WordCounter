@@ -26,8 +26,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="60dp"
         android:onClick="onCountButtonClicked"
+        android:padding="22dp"
         android:text="@string/count"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textSize="30dp" />
 
 
 
